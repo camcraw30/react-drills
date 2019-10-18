@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 
-class Image extends Component {
+export default class Image extends Component {
     render() {
         return (
             <div>
