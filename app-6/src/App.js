@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Todo from "./components/Todo";
+import Todo from "./Todo";
 
 class App extends Component {
   constructor() {
@@ -9,21 +9,21 @@ class App extends Component {
 
     this.state = {
       list: [],
-      input: ''
-    }
+      input: ""
+    };
 
     this.handleAddTask = this.handleAddTask.bind(this);
   }
 
   handleInputChange(value) {
-    this.setState({ Input: value });
+    this.setState({ input: value });
   }
 
   handleAddTask() {
-    this.setState({ 
+    this.setState({
       list: [...this.state.list, this.state.input],
-      input: ''
-    })
+      input: ""
+    });
   }
 
   render() {
@@ -37,9 +37,11 @@ class App extends Component {
 
         <div>
           <input
-          value={this.state.input}
-          placeholder="Enter new task"
-          onChange={e => this.handleInputChange(e.target.value)} />
+            value={this.state.input}
+            placeholder="Enter new task"
+            onChange={e => this.handleInputChange(e.target.value)}
+          />
+
           <button onClick={this.handleAddTask}>Add</button>
         </div>
 
@@ -47,7 +49,7 @@ class App extends Component {
 
         {list}
       </div>
-    )
+    );
   }
 }
 
