@@ -14,8 +14,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get("https://swapi.co/api/people/1").then
-    (response => {
+    axios.get("https://swapi.co/api/people/1").then(response => {
       this.setState({lukeSkywalker: response.data
       })
     })
